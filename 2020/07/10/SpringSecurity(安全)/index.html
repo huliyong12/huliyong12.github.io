@@ -1,0 +1,288 @@
+
+<!DOCTYPE html>
+<html lang="en" class="loading">
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>SpringSecurity(安全) - H_L_Y</title>
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="google" content="notranslate" />
+    <meta name="keywords" content="Fechin,"> 
+    <meta name="description" content="个人学习留笔记的角落,
+title:SpringSecuritySpringSecurity(安全)安全简介在 Web 开发中，安全一直是非常重要的一个方面。安全虽然属于应用的非功能性需求，但是应该在应用开发的初期就考虑,"> 
+    <meta name="author" content="H_L_Y"> 
+    <link rel="alternative" href="atom.xml" title="H_L_Y" type="application/atom+xml"> 
+    <link rel="icon" href="/img/favicon.png"> 
+    
+    
+<link rel="stylesheet" href="/css/diaspora.css">
+
+	<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+    <script>
+         (adsbygoogle = window.adsbygoogle || []).push({
+              google_ad_client: "ca-pub-8691406134231910",
+              enable_page_level_ads: true
+         });
+    </script>
+    <script async custom-element="amp-auto-ads"
+        src="https://cdn.ampproject.org/v0/amp-auto-ads-0.1.js">
+    </script>
+<meta name="generator" content="Hexo 4.2.1"></head>
+
+<body class="loading">
+    <span id="config-title" style="display:none">H_L_Y</span>
+    <div id="loader"></div>
+    <div id="single">
+    <div id="top" style="display: block;">
+    <div class="bar" style="width: 0;"></div>
+    <a class="iconfont icon-home image-icon" href="javascript:;" data-url="huliyong.top"></a>
+    <div title="播放/暂停" class="iconfont icon-play"></div>
+    <h3 class="subtitle">SpringSecurity(安全)</h3>
+    <div class="social">
+        <div>
+            <div class="share">
+                <a title="获取二维码" class="iconfont icon-scan" href="javascript:;"></a>
+            </div>
+            <div id="qr"></div>
+        </div>
+    </div>
+    <div class="scrollbar"></div>
+</div>
+
+    <div class="section">
+        <div class="article">
+    <div class='main'>
+        <h1 class="title">SpringSecurity(安全)</h1>
+        <div class="stuff">
+            <span>七月 10, 2020</span>
+            
+
+        </div>
+        <div class="content markdown">
+            <hr>
+<h2 id="title-SpringSecurity"><a href="#title-SpringSecurity" class="headerlink" title="title:SpringSecurity"></a>title:SpringSecurity</h2><h1 id="SpringSecurity-安全"><a href="#SpringSecurity-安全" class="headerlink" title="SpringSecurity(安全)"></a>SpringSecurity(安全)</h1><h2 id="安全简介"><a href="#安全简介" class="headerlink" title="安全简介"></a>安全简介</h2><p>在 Web 开发中，安全一直是非常重要的一个方面。安全虽然属于应用的非功能性需求，但是应该在应用开发的初期就考虑进来。如果在应用开发的后期才考虑安全的问题，就可能陷入一个两难的境地：一方面，应用存在严重的安全漏洞，无法满足用户的要求，并可能造成用户的隐私数据被攻击者窃取；另一方面，应用的基本架构已经确定，要修复安全漏洞，可能需要对系统的架构做出比较重大的调整，因而需要更多的开发时间，影响应用的发布进程。因此，从应用开发的第一天就应该把安全相关的因素考虑进来，并在整个应用的开发过程中。</p>
+<p>市面上存在比较有名的：Shiro，Spring Security ！</p>
+<p>Spring Security是一个功能强大且高度可定制的身份验证和访问控制框架。它实际上是保护基于spring的应用程序的标准。</p>
+<p>Spring Security是一个框架，侧重于为Java应用程序提供身份验证和授权。与所有Spring项目一样，Spring安全性的真正强大之处在于它可以轻松地扩展以满足定制需求</p>
+<p>Spring Security 基于 Spring 框架，提供了一套 Web 应用安全性的完整解决方案。一般来说，Web 应用的安全性包括用户认证（Authentication）和用户授权（Authorization）两个部分。用户认证指的是验证某个用户是否为系统中的合法主体，也就是说用户能否访问该系统。用户认证一般要求用户提供用户名和密码。系统通过校验用户名和密码来完成认证过程。用户授权指的是验证某个用户是否有权限执行某个操作。在一个系统中，不同用户所具有的权限是不同的。比如对一个文件来说，有的用户只能进行读取，而有的用户可以进行修改。一般来说，系统会为不同的用户分配不同的角色，而每个角色则对应一系列的权限。</p>
+<p>对于上面提到的两种应用情景，Spring Security 框架都有很好的支持。在用户认证方面，Spring Security 框架支持主流的认证方式，包括 HTTP 基本认证、HTTP 表单验证、HTTP 摘要认证、OpenID 和 LDAP 等。在用户授权方面，Spring Security 提供了基于角色的访问控制和访问控制列表（Access Control List，ACL），可以对应用中的领域对象进行细粒度的控制。</p>
+<h3 id="认识SpringSecurity"><a href="#认识SpringSecurity" class="headerlink" title="认识SpringSecurity"></a>认识SpringSecurity</h3><p>Spring Security 是针对Spring项目的安全框架，也是Spring Boot底层安全模块默认的技术选型，他可以实现强大的Web安全控制，对于安全控制，我们仅需要引入 spring-boot-starter-security 模块，进行少量的配置，即可实现强大的安全管理！ </p>
+<ul>
+<li>WebSecurityConfigurerAdapter：自定义Security策略</li>
+<li>AuthenticationManagerBuilder：自定义认证策略</li>
+<li>@EnableWebSecurity：开启WebSecurity模式</li>
+</ul>
+<p>Spring Security的两个主要目标是</p>
+<pre><code>“认证” </code></pre><p>​            “授权”（访问控制）。</p>
+<p><strong>“认证”（Authentication）</strong></p>
+<p>身份验证是关于验证您的凭据，如用户名/用户ID和密码，以验证您的身份。</p>
+<p>身份验证通常通过用户名和密码完成，有时与身份验证因素结合使用。</p>
+<p> <strong>“授权” （Authorization）</strong></p>
+<p>授权发生在系统成功验证您的身份后，最终会授予您访问资源（如信息，文件，数据库，资金，位置，几乎任何内容）的完全权限</p>
+<p>文档</p>
+<p><a href="https://docs.spring.io/spring-security/site/docs/5.3.0.RELEASE/reference/html5" target="_blank" rel="noopener">https://docs.spring.io/spring-security/site/docs/5.3.0.RELEASE/reference/html5</a>  </p>
+<p>导入依赖</p>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">dependency</span>&gt;</span></span><br><span class="line">   <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>org.springframework.boot<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span><br><span class="line">   <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>spring-boot-starter-security<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">dependency</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<p><img src="C:%5CUsers%5Chly%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20200705114106488.png" alt="image-20200705114106488"></p>
+<p><img src="C:%5CUsers%5Chly%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20200705114345239.png" alt="image-20200705114345239"></p>
+<p>重写 </p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">configure(HttpSecurity http) throws Exception</span><br></pre></td></tr></table></figure>
+
+<h3 id="授权"><a href="#授权" class="headerlink" title="授权"></a>授权</h3><p>实验</p>
+<p>config 包下</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@EnableWebSecurity</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">securityConfig</span> <span class="keyword">extends</span> <span class="title">WebSecurityConfigurerAdapter</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="function"><span class="keyword">protected</span> <span class="keyword">void</span> <span class="title">configure</span><span class="params">(HttpSecurity http)</span> <span class="keyword">throws</span> Exception </span>&#123;</span><br><span class="line">        <span class="comment">//首页都可以访问  功能页有权限才能访问</span></span><br><span class="line">        <span class="comment">// 定制请求的授权规则</span></span><br><span class="line">        <span class="comment">// 首页所有人可以访问</span></span><br><span class="line">        http.authorizeRequests()</span><br><span class="line">                .antMatchers(<span class="string">"/"</span>).permitAll()</span><br><span class="line">                .antMatchers(<span class="string">"/level1/**"</span>).hasRole(<span class="string">"vip1"</span>)</span><br><span class="line">                .antMatchers(<span class="string">"/level2/**"</span>).hasRole(<span class="string">"vip2"</span>)</span><br><span class="line">                .antMatchers(<span class="string">"/level3/**"</span>).hasRole(<span class="string">"vip3"</span>);</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+
+<p>不出意外  首页都能访问   level123 各个包下的资源无权限是无法访问</p>
+<p><img src="C:%5CUsers%5Chly%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20200705115257584.png" alt="image-20200705115257584"></p>
+<p>开启<strong>http.formLogin();</strong>  在没权限后自动跳转到登陆界面</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@EnableWebSecurity</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">securityConfig</span> <span class="keyword">extends</span> <span class="title">WebSecurityConfigurerAdapter</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="function"><span class="keyword">protected</span> <span class="keyword">void</span> <span class="title">configure</span><span class="params">(HttpSecurity http)</span> <span class="keyword">throws</span> Exception </span>&#123;</span><br><span class="line">        <span class="comment">//首页都可以访问  功能页有权限才能访问</span></span><br><span class="line">        <span class="comment">// 定制请求的授权规则</span></span><br><span class="line">        <span class="comment">// 首页所有人可以访问</span></span><br><span class="line">        http.authorizeRequests()</span><br><span class="line">                .antMatchers(<span class="string">"/"</span>).permitAll()</span><br><span class="line">                .antMatchers(<span class="string">"/level1/**"</span>).hasRole(<span class="string">"vip1"</span>)</span><br><span class="line">                .antMatchers(<span class="string">"/level2/**"</span>).hasRole(<span class="string">"vip2"</span>)</span><br><span class="line">                .antMatchers(<span class="string">"/level3/**"</span>).hasRole(<span class="string">"vip3"</span>);</span><br><span class="line">        <span class="comment">//没有权限 跳到登陆页</span></span><br><span class="line">        http.formLogin();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+
+<p><img src="C:%5CUsers%5Chly%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20200705115638701.png" alt="image-20200705115638701"></p>
+<p>分析</p>
+<p><img src="C:%5CUsers%5Chly%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20200705120815505.png" alt="image-20200705120815505"></p>
+<p>指定支持基于表单的身份验证。 如果FormLoginConfigurer.loginPage(String)没有指定，将产生一个默认的登录页面。<br>示例<br>最基本的配置默认为在URL“/登录”自动生成一个登录页面，   认证失败</p>
+<p>重定向到“/登录 错误”</p>
+<h3 id="认证"><a href="#认证" class="headerlink" title="认证"></a>认证</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//认证</span></span><br><span class="line"><span class="meta">@Override</span></span><br><span class="line"><span class="function"><span class="keyword">protected</span> <span class="keyword">void</span> <span class="title">configure</span><span class="params">(AuthenticationManagerBuilder auth)</span> <span class="keyword">throws</span> Exception </span>&#123;</span><br><span class="line">    <span class="comment">//正常从数据库读取</span></span><br><span class="line">    auth.inMemoryAuthentication()</span><br><span class="line">            .withUser(<span class="string">"huliyong"</span>).password(<span class="string">"123456"</span>).roles(<span class="string">"vip2"</span>,<span class="string">"vip3"</span>)</span><br><span class="line">            .and()</span><br><span class="line">            .withUser(<span class="string">"admin"</span>).password(<span class="string">"123456"</span>).roles(<span class="string">"vip1"</span>,<span class="string">"vip2"</span>,<span class="string">"vip3"</span>)</span><br><span class="line">            .and()</span><br><span class="line">            .withUser(<span class="string">"guest"</span>).password(<span class="string">"123456"</span>).roles(<span class="string">"vip1"</span>);</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>正常这样之后 登陆进去就可以使用    </p>
+<p>但是在 输入账户密码之后  报500 错误</p>
+<p><strong>java.lang.IllegalArgumentException: There is no PasswordEncoder mapped for the id “null”</strong></p>
+<p>原因：在springboot 2.1.X 之前的版本是可以直接用  </p>
+<p>现在需要加编码 springsecutiry5.0 +新增了很多加密方法</p>
+<p>加上编码</p>
+<p><img src="C:%5CUsers%5Chly%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20200705134138695.png" alt="image-20200705134138695"></p>
+<p>查看源码 可以看到很多的加密方式   根据需要选择</p>
+<p><img src="C:%5CUsers%5Chly%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20200705133758220.png" alt="image-20200705133758220"></p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//认证</span></span><br><span class="line"><span class="meta">@Override</span></span><br><span class="line"><span class="function"><span class="keyword">protected</span> <span class="keyword">void</span> <span class="title">configure</span><span class="params">(AuthenticationManagerBuilder auth)</span> <span class="keyword">throws</span> Exception </span>&#123;</span><br><span class="line">    <span class="comment">//正常从数据库读取</span></span><br><span class="line">    auth.inMemoryAuthentication().passwordEncoder(<span class="keyword">new</span> BCryptPasswordEncoder())</span><br><span class="line"></span><br><span class="line">            .withUser(<span class="string">"huliyong"</span>).password( <span class="keyword">new</span> BCryptPasswordEncoder().encode(<span class="string">"123456"</span>)).roles(<span class="string">"vip2"</span>,<span class="string">"vip3"</span>)</span><br><span class="line">            .and()</span><br><span class="line">            .withUser(<span class="string">"admin"</span>).password(<span class="keyword">new</span> BCryptPasswordEncoder().encode(<span class="string">"123456"</span>)).roles(<span class="string">"vip1"</span>,<span class="string">"vip2"</span>,<span class="string">"vip3"</span>)</span><br><span class="line">            .and()</span><br><span class="line">            .withUser(<span class="string">"guest"</span>).password(<span class="keyword">new</span> BCryptPasswordEncoder().encode(<span class="string">"123456"</span>)).roles(<span class="string">"vip1"</span>);</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+
+
+
+
+
+<h3 id="注销"><a href="#注销" class="headerlink" title="注销"></a>注销</h3><p>开启注销功能</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">http.logout();</span><br></pre></td></tr></table></figure>
+
+<p>我们在前端，增加一个注销的按钮，index.html 导航栏中</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&lt;a class&#x3D;&quot;item&quot; th:href&#x3D;&quot;@&#123;&#x2F;logout&#125;&quot;&gt;</span><br><span class="line">   &lt;i class&#x3D;&quot;address card icon&quot;&gt;&lt;&#x2F;i&gt; 注销</span><br><span class="line">&lt;&#x2F;a&gt;</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// .logoutSuccessUrl("/"); 注销成功来到首页</span></span><br><span class="line">http.logout().logoutSuccessUrl(<span class="string">"/"</span>);</span><br></pre></td></tr></table></figure>
+
+<p>如果注销404 </p>
+<p>因为它默认防止csrf跨站请求伪造，因为会产生安全问题，我们可以将请求改为post表单提交，或者在spring security中关闭csrf功能；我们试试：在 配置中增加 http.csrf().disable();</p>
+<p>用户没有登录的时候，导航栏上只显示登录按钮，用户登录之后，导航栏可以显</p>
+<p>示登录的用户信息及注销按钮！还有就是，比如huliyong这个用户，它只有 vip2，vip3功能，那么登录则只显示这两个功能，而vip1的功能菜单不显示！这个就是真实的网站情况了！该如何做呢？</p>
+<p>导入依赖</p>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">&lt;!-- https://mvnrepository.com/artifact/org.thymeleaf.extras/thymeleaf-extras-springsecurity4 --&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">dependency</span>&gt;</span></span><br><span class="line">   <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>org.thymeleaf.extras<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span><br><span class="line">   <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>thymeleaf-extras-springsecurity5<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line">   <span class="tag">&lt;<span class="name">version</span>&gt;</span>3.0.4.RELEASE<span class="tag">&lt;/<span class="name">version</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">dependency</span></span></span><br></pre></td></tr></table></figure>
+
+<p>命名空间</p>
+<ol>
+<li><pre><code class="xml">xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity5"
+<span class="comment"><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">&#96;&#96;&#96;html</span><br><span class="line">&lt;!--登录注销--&gt;</span><br><span class="line">&lt;div class&#x3D;&quot;right menu&quot;&gt;</span><br><span class="line"></span><br><span class="line">   &lt;!--如果未登录--&gt;</span><br><span class="line">   &lt;div sec:authorize&#x3D;&quot;!isAuthenticated()&quot;&gt;</span><br><span class="line">       &lt;a class&#x3D;&quot;item&quot; th:href&#x3D;&quot;@&#123;&#x2F;login&#125;&quot;&gt;</span><br><span class="line">           &lt;i class&#x3D;&quot;address card icon&quot;&gt;&lt;&#x2F;i&gt; 登录</span><br><span class="line">       &lt;&#x2F;a&gt;</span><br><span class="line">   &lt;&#x2F;div&gt;</span><br><span class="line"></span><br><span class="line">   &lt;!--如果已登录--&gt;</span><br><span class="line">   &lt;div sec:authorize&#x3D;&quot;isAuthenticated()&quot;&gt;</span><br><span class="line">       &lt;a class&#x3D;&quot;item&quot;&gt;</span><br><span class="line">           &lt;i class&#x3D;&quot;address card icon&quot;&gt;&lt;&#x2F;i&gt;</span><br><span class="line">          用户名：&lt;span sec:authentication&#x3D;&quot;principal.username&quot;&gt;&lt;&#x2F;span&gt;</span><br><span class="line">          角色：&lt;span sec:authentication&#x3D;&quot;principal.authorities&quot;&gt;&lt;&#x2F;span&gt;</span><br><span class="line">       &lt;&#x2F;a&gt;</span><br><span class="line">   &lt;&#x2F;div&gt;</span><br><span class="line"></span><br><span class="line">   &lt;div sec:authorize&#x3D;&quot;isAuthenticated()&quot;&gt;</span><br><span class="line">       &lt;a class&#x3D;&quot;item&quot; th:href&#x3D;&quot;@&#123;&#x2F;logout&#125;&quot;&gt;</span><br><span class="line">           &lt;i class&#x3D;&quot;address card icon&quot;&gt;&lt;&#x2F;i&gt; 注销</span><br><span class="line">       &lt;&#x2F;a&gt;</span><br><span class="line">   &lt;&#x2F;div&gt;</span><br><span class="line">&lt;&#x2F;div&gt;</span><br></pre></td></tr></table></figure></span>
+</code></pre>
+</li>
+</ol>
+<p><img src="C:%5CUsers%5Chly%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20200705141052354.png" alt="image-20200705141052354"></p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">&lt;!-- sec:authorize="hasRole('vip1')" --&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"column"</span> <span class="attr">sec:authorize</span>=<span class="string">"hasRole('vip1')"</span>&gt;</span></span><br><span class="line">   <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"ui raised segment"</span>&gt;</span></span><br><span class="line">       <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"ui"</span>&gt;</span></span><br><span class="line">           <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"content"</span>&gt;</span></span><br><span class="line">               <span class="tag">&lt;<span class="name">h5</span> <span class="attr">class</span>=<span class="string">"content"</span>&gt;</span>Level 1<span class="tag">&lt;/<span class="name">h5</span>&gt;</span></span><br><span class="line">               <span class="tag">&lt;<span class="name">hr</span>&gt;</span></span><br><span class="line">               <span class="tag">&lt;<span class="name">div</span>&gt;</span><span class="tag">&lt;<span class="name">a</span> <span class="attr">th:href</span>=<span class="string">"@&#123;/level1/1&#125;"</span>&gt;</span><span class="tag">&lt;<span class="name">i</span> <span class="attr">class</span>=<span class="string">"bullhorn icon"</span>&gt;</span><span class="tag">&lt;/<span class="name">i</span>&gt;</span>Level-1-1<span class="tag">&lt;/<span class="name">a</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">               <span class="tag">&lt;<span class="name">div</span>&gt;</span><span class="tag">&lt;<span class="name">a</span> <span class="attr">th:href</span>=<span class="string">"@&#123;/level1/2&#125;"</span>&gt;</span><span class="tag">&lt;<span class="name">i</span> <span class="attr">class</span>=<span class="string">"bullhorn icon"</span>&gt;</span><span class="tag">&lt;/<span class="name">i</span>&gt;</span>Level-1-2<span class="tag">&lt;/<span class="name">a</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">               <span class="tag">&lt;<span class="name">div</span>&gt;</span><span class="tag">&lt;<span class="name">a</span> <span class="attr">th:href</span>=<span class="string">"@&#123;/level1/3&#125;"</span>&gt;</span><span class="tag">&lt;<span class="name">i</span> <span class="attr">class</span>=<span class="string">"bullhorn icon"</span>&gt;</span><span class="tag">&lt;/<span class="name">i</span>&gt;</span>Level-1-3<span class="tag">&lt;/<span class="name">a</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">           <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">       <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">   <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"column"</span> <span class="attr">sec:authorize</span>=<span class="string">"hasRole('vip2')"</span>&gt;</span></span><br><span class="line">   <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"ui raised segment"</span>&gt;</span></span><br><span class="line">       <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"ui"</span>&gt;</span></span><br><span class="line">           <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"content"</span>&gt;</span></span><br><span class="line">               <span class="tag">&lt;<span class="name">h5</span> <span class="attr">class</span>=<span class="string">"content"</span>&gt;</span>Level 2<span class="tag">&lt;/<span class="name">h5</span>&gt;</span></span><br><span class="line">               <span class="tag">&lt;<span class="name">hr</span>&gt;</span></span><br><span class="line">               <span class="tag">&lt;<span class="name">div</span>&gt;</span><span class="tag">&lt;<span class="name">a</span> <span class="attr">th:href</span>=<span class="string">"@&#123;/level2/1&#125;"</span>&gt;</span><span class="tag">&lt;<span class="name">i</span> <span class="attr">class</span>=<span class="string">"bullhorn icon"</span>&gt;</span><span class="tag">&lt;/<span class="name">i</span>&gt;</span>Level-2-1<span class="tag">&lt;/<span class="name">a</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">               <span class="tag">&lt;<span class="name">div</span>&gt;</span><span class="tag">&lt;<span class="name">a</span> <span class="attr">th:href</span>=<span class="string">"@&#123;/level2/2&#125;"</span>&gt;</span><span class="tag">&lt;<span class="name">i</span> <span class="attr">class</span>=<span class="string">"bullhorn icon"</span>&gt;</span><span class="tag">&lt;/<span class="name">i</span>&gt;</span>Level-2-2<span class="tag">&lt;/<span class="name">a</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">               <span class="tag">&lt;<span class="name">div</span>&gt;</span><span class="tag">&lt;<span class="name">a</span> <span class="attr">th:href</span>=<span class="string">"@&#123;/level2/3&#125;"</span>&gt;</span><span class="tag">&lt;<span class="name">i</span> <span class="attr">class</span>=<span class="string">"bullhorn icon"</span>&gt;</span><span class="tag">&lt;/<span class="name">i</span>&gt;</span>Level-2-3<span class="tag">&lt;/<span class="name">a</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">           <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">       <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">   <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"column"</span> <span class="attr">sec:authorize</span>=<span class="string">"hasRole('vip3')"</span>&gt;</span></span><br><span class="line">   <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"ui raised segment"</span>&gt;</span></span><br><span class="line">       <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"ui"</span>&gt;</span></span><br><span class="line">           <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"content"</span>&gt;</span></span><br><span class="line">               <span class="tag">&lt;<span class="name">h5</span> <span class="attr">class</span>=<span class="string">"content"</span>&gt;</span>Level 3<span class="tag">&lt;/<span class="name">h5</span>&gt;</span></span><br><span class="line">               <span class="tag">&lt;<span class="name">hr</span>&gt;</span></span><br><span class="line">               <span class="tag">&lt;<span class="name">div</span>&gt;</span><span class="tag">&lt;<span class="name">a</span> <span class="attr">th:href</span>=<span class="string">"@&#123;/level3/1&#125;"</span>&gt;</span><span class="tag">&lt;<span class="name">i</span> <span class="attr">class</span>=<span class="string">"bullhorn icon"</span>&gt;</span><span class="tag">&lt;/<span class="name">i</span>&gt;</span>Level-3-1<span class="tag">&lt;/<span class="name">a</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">               <span class="tag">&lt;<span class="name">div</span>&gt;</span><span class="tag">&lt;<span class="name">a</span> <span class="attr">th:href</span>=<span class="string">"@&#123;/level3/2&#125;"</span>&gt;</span><span class="tag">&lt;<span class="name">i</span> <span class="attr">class</span>=<span class="string">"bullhorn icon"</span>&gt;</span><span class="tag">&lt;/<span class="name">i</span>&gt;</span>Level-3-2<span class="tag">&lt;/<span class="name">a</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">               <span class="tag">&lt;<span class="name">div</span>&gt;</span><span class="tag">&lt;<span class="name">a</span> <span class="attr">th:href</span>=<span class="string">"@&#123;/level3/3&#125;"</span>&gt;</span><span class="tag">&lt;<span class="name">i</span> <span class="attr">class</span>=<span class="string">"bullhorn icon"</span>&gt;</span><span class="tag">&lt;/<span class="name">i</span>&gt;</span>Level-3-3<span class="tag">&lt;/<span class="name">a</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">           <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">       <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">   <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+
+
+
+
+<h3 id="记住我http-rememberMe"><a href="#记住我http-rememberMe" class="headerlink" title="记住我http.rememberMe();"></a>记住我http.rememberMe();</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">http.rememberMe();</span><br></pre></td></tr></table></figure>
+
+
+
+<p>记住我后 关闭浏览器  重新进去 会自动登陆  默认保存两周14天</p>
+<h3 id="使用自己的登陆页"><a href="#使用自己的登陆页" class="headerlink" title="使用自己的登陆页"></a>使用自己的登陆页</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">http.formLogin().loginPage(&quot;&#x2F;tologin&quot;);</span><br></pre></td></tr></table></figure>
+
+
+
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;input type&#x3D;&quot;checkbox&quot; name&#x3D;&quot;remember&quot;&gt; 记住我</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">&#x2F;&#x2F;定制记住我的参数！</span><br><span class="line">http.rememberMe().rememberMeParameter(&quot;remember&quot;);</span><br></pre></td></tr></table></figure>
+
+
+
+
+
+
+
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//定制请求的授权规则</span></span><br><span class="line">   <span class="meta">@Override</span></span><br><span class="line">   <span class="function"><span class="keyword">protected</span> <span class="keyword">void</span> <span class="title">configure</span><span class="params">(HttpSecurity http)</span> <span class="keyword">throws</span> Exception </span>&#123;</span><br><span class="line"></span><br><span class="line">       http.authorizeRequests().antMatchers(<span class="string">"/"</span>).permitAll()</span><br><span class="line">      .antMatchers(<span class="string">"/level1/**"</span>).hasRole(<span class="string">"vip1"</span>)</span><br><span class="line">      .antMatchers(<span class="string">"/level2/**"</span>).hasRole(<span class="string">"vip2"</span>)</span><br><span class="line">      .antMatchers(<span class="string">"/level3/**"</span>).hasRole(<span class="string">"vip3"</span>);</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">       <span class="comment">//开启自动配置的登录功能：如果没有权限，就会跳转到登录页面！</span></span><br><span class="line">           <span class="comment">// /login 请求来到登录页</span></span><br><span class="line">           <span class="comment">// /login?error 重定向到这里表示登录失败</span></span><br><span class="line">       http.formLogin()</span><br><span class="line">          .usernameParameter(<span class="string">"username"</span>)</span><br><span class="line">          .passwordParameter(<span class="string">"password"</span>)</span><br><span class="line">          .loginPage(<span class="string">"/toLogin"</span>)</span><br><span class="line">          .loginProcessingUrl(<span class="string">"/login"</span>); <span class="comment">// 登陆表单提交请求</span></span><br><span class="line"></span><br><span class="line">       <span class="comment">//开启自动配置的注销的功能</span></span><br><span class="line">           <span class="comment">// /logout 注销请求</span></span><br><span class="line">           <span class="comment">// .logoutSuccessUrl("/"); 注销成功来到首页</span></span><br><span class="line"></span><br><span class="line">       http.csrf().disable();<span class="comment">//关闭csrf功能:跨站请求伪造,默认只能通过post方式提交logout请求</span></span><br><span class="line">       http.logout().logoutSuccessUrl(<span class="string">"/"</span>);</span><br><span class="line"></span><br><span class="line">       <span class="comment">//记住我</span></span><br><span class="line">       http.rememberMe().rememberMeParameter(<span class="string">"remember"</span>);</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">   <span class="comment">//定义认证规则</span></span><br><span class="line">   <span class="meta">@Override</span></span><br><span class="line">   <span class="function"><span class="keyword">protected</span> <span class="keyword">void</span> <span class="title">configure</span><span class="params">(AuthenticationManagerBuilder auth)</span> throwsException </span>&#123;</span><br><span class="line">       <span class="comment">//在内存中定义，也可以在jdbc中去拿....</span></span><br><span class="line">       <span class="comment">//Spring security 5.0中新增了多种加密方式，也改变了密码的格式。</span></span><br><span class="line">       <span class="comment">//要想我们的项目还能够正常登陆，需要修改一下configure中的代码。我们要将前端传过来的密码进行某种方式加密</span></span><br><span class="line">       <span class="comment">//spring security 官方推荐的是使用bcrypt加密方式。</span></span><br><span class="line"></span><br><span class="line">       auth.inMemoryAuthentication().passwordEncoder(newBCryptPasswordEncoder())</span><br><span class="line">              .withUser(<span class="string">"kuangshen"</span>).password(newBCryptPasswordEncoder().encode(<span class="string">"123456"</span>)).roles(<span class="string">"vip2"</span>,<span class="string">"vip3"</span>)</span><br><span class="line">              .and()</span><br><span class="line">              .withUser(<span class="string">"root"</span>).password(newBCryptPasswordEncoder().encode(<span class="string">"123456"</span>)).roles(<span class="string">"vip1"</span>,<span class="string">"vip2"</span>,<span class="string">"vip3"</span>)</span><br><span class="line">              .and()</span><br><span class="line">              .withUser(<span class="string">"guest"</span>).password(newBCryptPasswordEncoder().encode(<span class="string">"123456"</span>)).roles(<span class="string">"vip1"</span>,<span class="string">"vip2"</span>);</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+            <!--[if lt IE 9]><script>document.createElement('audio');</script><![endif]-->
+            <audio id="audio" loop="1" preload="auto" controls="controls" data-autoplay="false">
+                <source type="audio/mpeg" src="">
+            </audio>
+            
+                <ul id="audio-list" style="display:none">
+                    
+                        
+                            <li title='0' data-url='http://link.hhtjim.com/163/425570952.mp3'></li>
+                        
+                    
+                        
+                            <li title='1' data-url='http://link.hhtjim.com/163/425570952.mp3'></li>
+                        
+                    
+                </ul>
+            
+        </div>
+        
+    <div id='gitalk-container' class="comment link"
+		data-enable='false'
+        data-ae='false'
+        data-ci=''
+        data-cs=''
+        data-r=''
+        data-o=''
+        data-a=''
+        data-d='false'
+    >查看评论</div>
+
+
+    </div>
+    
+</div>
+
+
+    </div>
+</div>
+</body>
+
+
+<script src="//lib.baomitu.com/jquery/1.8.3/jquery.min.js"></script>
+<script src="/js/plugin.js"></script>
+<script src="/js/typed.js"></script>
+<script src="/js/diaspora.js"></script>
+
+
+<link rel="stylesheet" href="/photoswipe/photoswipe.css">
+<link rel="stylesheet" href="/photoswipe/default-skin/default-skin.css">
+
+
+<script src="/photoswipe/photoswipe.min.js"></script>
+<script src="/photoswipe/photoswipe-ui-default.min.js"></script>
+
+
+<!-- Root element of PhotoSwipe. Must have class pswp. -->
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+    <!-- Background of PhotoSwipe. 
+         It's a separate element as animating opacity is faster than rgba(). -->
+    <div class="pswp__bg"></div>
+    <!-- Slides wrapper with overflow:hidden. -->
+    <div class="pswp__scroll-wrap">
+        <!-- Container that holds slides. 
+            PhotoSwipe keeps only 3 of them in the DOM to save memory.
+            Don't modify these 3 pswp__item elements, data is added later on. -->
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+        <!-- Default (PhotoSwipeUI_Default) interface on top of sliding area. Can be changed. -->
+        <div class="pswp__ui pswp__ui--hidden">
+            <div class="pswp__top-bar">
+                <!--  Controls are self-explanatory. Order can be changed. -->
+                <div class="pswp__counter"></div>
+                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+                <button class="pswp__button pswp__button--share" title="Share"></button>
+                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+                <!-- Preloader demo http://codepen.io/dimsemenov/pen/yyBWoR -->
+                <!-- element will get class pswp__preloader--active when preloader is running -->
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                      <div class="pswp__preloader__cut">
+                        <div class="pswp__preloader__donut"></div>
+                      </div>
+                    </div>
+                </div>
+            </div>
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div> 
+            </div>
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+            </button>
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+            </button>
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+
+</html>
